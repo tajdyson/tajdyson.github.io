@@ -26,3 +26,16 @@ a {
     font-size: 150%;
     font-family: KlinicBold;
 }
+
+button.listlinkbutt {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: KlinicBold;
+    font-size: 100%;
+    /*input has OS specific font-family*/
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
