@@ -1,4 +1,41 @@
+body {
+    background-color: black;
+}
+
 @font-face { font-family: KlinicReg; src: url('KlinicSlabBook.otf'); }
+@font-face { font-family: KlinicBold; src: url('KlinicSlabBold.otf') }
+
 p {
+    color:  white;
+    font-size: 125%;
     font-family: KlinicReg
+}
+
+a {
+    color: white;
+}
+
+.title {
+    color: white;
+    font-size: 200%;
+    font-family: KlinicBold;
+}
+
+.listlink {
+    color: white;
+    font-size: 150%;
+    font-family: KlinicBold;
+}
+
+button.listlinkbutt {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: KlinicBold;
+    font-size: 100%;
+    /*input has OS specific font-family*/
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
 }
