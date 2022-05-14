@@ -21,8 +21,7 @@
     <p>
       I can guarantee this is fewer than 10 years out of date.
     </p>
-
-    <img id="researchImg" align="right" src="mountain.jpg" alt="placeholder" style="width: 400px; height: 225px">
+      <img id="researchImg" align="right" src="mountain.jpg" alt="placeholder" style="width: 400px; height: 267px">
     <div class="listlink">
       <button class="listlinkbutt" onclick="displayOnly(0)">(2022) Detecting with Qubits</button>
     </div>
@@ -56,6 +55,7 @@
             <button class="listlinkbutt" onclick="displayOnly(3)">(2018-2021) Radio Cosmology Field Work</button>
     </div>
     <div id="3" style="display: none">
+      <img src="mountain.jpg" style="width: 400px; height: 225px">
     </div>
     <div class="listlink">
             <button class="listlinkbutt" onclick="displayOnly(4)">(2020-2021) Radio Interferometry Analysis</button>
@@ -69,9 +69,11 @@
     </div>
 
     <script>
-      const boxes = ["0", "1", "2", "3", "4", "5"]
-      const imageNames = ["mountain.jpg", "hogan.jpg","img2","img3","img4", "img5"]
-      const titleTexts = ["placeholder", "Strontium atom held in place by lasers.", "", "", "", "", ""]
+      const boxes = ["0", "1", "2", "3", "4", "5"];
+      const imageNames = ["mountain.jpg", "hogan.jpg","axion prototype.png","img3","img4", "img5"];
+      const imageWidths = ["400px", "416px", "392px", "0px", "25%", "25%"];
+      const imageHeights = ["267px", "312px", "602px", "0px", "25%", "25%"];
+      const titleTexts = ["placeholder", "Strontium atoms held in place by lasers.", "Prototype haloscope.", "", "", "", ""];
       
       function displayOnly(boxnum) {
 
@@ -80,6 +82,7 @@
 		  document.getElementById(boxes[i]).style.display = "block";
 		  document.getElementById("researchImg").src = imageNames[i];
 		  document.getElementById("researchImg").title = titleTexts[i];
+		  document.getElementById("researchImg").style = "width: "+imageWidths[i]+"; height: "+imageHeights[i];
 	      } else {
 		  document.getElementById(boxes[i]).style.display = "none";
 	      }
