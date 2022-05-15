@@ -15,6 +15,12 @@ a {
     color: white;
 }
 
+li {
+    color: white;
+    font-size: 125%;
+    font-family: KlinicReg
+}
+
 .title {
     color: white;
     font-size: 200%;
