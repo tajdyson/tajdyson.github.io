@@ -15,26 +15,25 @@
 
   </head>
 
-  <body>
+  <body onload="displayOnly(0)">
 
     <div class="title">Research</div>
     <p>
       I can guarantee this is fewer than 10 years out of date.
     </p>
-
-    <img id="researchImg" align="right" src="mountain.jpg" alt="placeholder" style="width: 400px; height: 225px">
+      <img id="researchImg" align="right">
     <div class="listlink">
       <button class="listlinkbutt" onclick="displayOnly(0)">(2022) Detecting with Qubits</button>
     </div>
     <div id="0" style="display: block">
       <p>
       It's somehow still an open question whether incoming radiation (photons, charged particles) affect qubit decoherence time. 
-      Knowing that shooting things at a qubit make it change states would be important for quantum computing by calling for a focus on radiation shielding. Not only that, but we could also tell whether the qubit had something shot at it, which has applications in many subfields, from cosmic microwave background (CMB) recievers to dark matter detectors.
+      Knowing that shooting things at a qubit make it change states would be important for quantum computing by calling for a focus on radiation shielding. Not only that, but we would then be able to tell whether the qubit had something shot at it, which has applications in many subfields, from cosmic microwave background (CMB) recievers to dark matter detectors.
       I'm working with Dr. Noah Kurinsky at the Stanford Linear Accelerator Center (SLAC) and a team at Northwestern and Fermilab, using a qubit in a dilution refrigerator at the Northwestern EXperimental Underground Site (NEXUS) to answer this question.
       </p>
     </div>
     <div class="listlink">
-          <button class="listlinkbutt" onclick="displayOnly(1)">(2022) Lasers</button>
+          <button class="listlinkbutt" onclick="displayOnly(1)">(2022) Working on Lasers for MAGIS</button>
     </div>
     <div id="1" style="display: none">
       <p>
@@ -46,29 +45,47 @@
     </div>
     <div id="2" style="display: none">
       <p>
-	
+	The axion is the most promising candidate for dark matter to date. Axions are directly detected in labs using resonating chambers called haloscopes. In the presence of a strong magnetic field, axions convert into photons of frequency equivalent to their mass. The resonant frequency of the haloscope thus decides what mass of axion it's sensitive to. By tuning the haloscope, we can become sensitive to different masses, either eliminate the possibility that axions have that mass, or if we're lucky, make a detection.
+      </p>
+      <p>
+	I worked on a novel haloscope designed by Professor Chao-Lin Kuo, which is physically large, allowing for fast scan rates, but resonating at a high frequency. We are thus able to explore a hitherto uncharted region of axion parameter space... eventually. So far, I've demonstrated that the prototype haloscope (pictured) is tunable and has the frequency we expect. We still need to scale up to a larger version, test it at cryogenic temperatures, implement a superconducting amplifier for our signals, and borrow a huge magnet from ADMX. I'll try to keep this updated.
       </p>
     </div>
     <div class="listlink">
-            <button class="listlinkbutt" onclick="displayOnly(3)">(2018-2021) Radio Cosmology Field Work</button>
+            <button class="listlinkbutt" onclick="displayOnly(3)">(2018-2021) On the Hunt for the Frist Stars</button>
     </div>
     <div id="3" style="display: none">
+      <!--
+      <img src="mountain.jpg" style="width: 400px; height: 225px">
+      <img src="mars_antenna.jpg" style="width: 400px; height: 225px">
+      <img src="marion.png" style="width: 466px; height: 253px">
+      <img src="uapishka.jpg" style="width: 390px; height: 293px">
+      -->
+      <p>
+	During my entire undergrad, I worked with Professors Cynthia Chiang and Jonathan Sievers at McGill University. The group's goal is to take measurements of the faint glow of neutral hydrogen, prevalent in the cosmic dark ages before the first stars formed, using radio interferometry. Since those signals happen to have roughly the same frequency as FM radio, these antennas must be very far from population centers, where power is not easily accessible. So, I was tasked with designing, building, and testing solar and wind power systems for an antenna on <a href="https://www.google.com/maps/place/Prince+Edward+Islands/">Marion Island</a>. I was credited for that in a paper, and even got the MagPi magazine to <a href="https://magpi.raspberrypi.com/articles/albatros-radio-astronomy-product-showcase">interview me</a> about the project.
+      </p>
+      <p>
+	I also deployed a prototype antenna system (pictured) at the <a href="https://www.google.com/maps/place/McGill+Arctic+Research+Station/@80.4565179,-122.1770981,3z/data=!4m5!3m4!1s0x502aadbc44d4a017:0xe2ec3b6884e9e47b!8m2!3d79.4153203!4d-90.7491938">McGill Arctic Research Station</a> (MARS), with Professor Chiang and Dr. Raul Monsalve of EDGES. I used the data I collected there to show that MARS is indeed an excellent site for our observations. I wrote a paper about that, and our work was featured in the <a href="https://magpi.raspberrypi.com/articles/albatros-radio-astronomy-product-showcase">PCSP Science Report</a>.
+      </p>
     </div>
     <div class="listlink">
-            <button class="listlinkbutt" onclick="displayOnly(4)">(2020-2021) Radio Interferometry Analysis</button>
+            <button class="listlinkbutt" onclick="displayOnly(4)">(2020) Emergent Computation</button>
     </div>
     <div id="4" style="display: none">
-    </div>
-    <div class="listlink">
-            <button class="listlinkbutt" onclick="displayOnly(5)">(2020) Emergent Computation</button>
-    </div>
-    <div id="5" style="display: none">
+      <p>
+	I can't shake a strange interest in the idea that 'complexity' (or 'computational irreducibility') must arise at some sort of 'phase transition' between 'ordered' and 'chaotic' phases. That there is some deep connection between the behaviour of dynamical systems (water, birds, etc.) and universal computers at that transition. That the system 'self-organizes' and new 'emergent' behaviours appear, possibly touching on the origin of life. Frustratingly, the words in scare quotes above don't have precise definitions. This makes doing general analysis of this problem very hard. So, a lot of people have turned to cellular automata (CA) as their system to investigate. CA are dynamical systems, and have been studied in that context. They are also capable of universal computation, and have been studied as computational systems. This duality makes them prime playgrounds for this kind of pontificating.
+      </p>
+      <p>
+	CA and their &lambda; parameter are explained well <a href="https://math.hws.edu/eck/js/edge-of-chaos/CA-info.html">here</a>, where there is also an interactive demo which is quite entrancing. Christopher Langton in his thesis conjectured that CA undergo a phase transition as you change the rules governing them from low-&lambda; to high-&lambda;. Indeed, in the figure, there is a vague jump from low-entropy 'ordered' states to high-entropy 'chaotic' ones as &lambda; increases. Unfortunately, there is no single value for &lambda; at which the jump occurs, meaning that no precise comparison can be drawn between this 'transition' and physcial phase transitions, which always occur at a sharp value of some parameter. It's clear that &lambda; is not the right parameter to scan across to look for this transition. It isn't clear, however, what to replace it with, or even that changing the rules underlying the CA is the right way to perturb them. In the Ising model, for example, the phase transition is along temperature, a parameter in the model, not along changing interaction rules. Perhaps CA are just too simple to have a real transition, even if some can exhibit ordered, chaotic, and even computationally universal behaviour.
+      </p>
     </div>
 
     <script>
-      const boxes = ["0", "1", "2", "3", "4", "5"]
-      const imageNames = ["mountain.jpg", "hogan.jpg","img2","img3","img4", "img5"]
-      const titleTexts = ["placeholder", "Strontium atom held in place by lasers.", "", "", "", "", ""]
+      const boxes = ["0", "1", "2", "3", "4"];
+      const imageNames = ["Blue Fors.jpg", "hogan.jpg","axion prototype.png","mars_antenna.jpg","CA entropy.png"];
+      const imageWidths = ["300px", "416px", "294px", "400px", "394px"];
+      const imageHeights = ["400px", "312px", "451px", "225px", "222px"];
+      const titleTexts = ["A Blue Fors cryostat. Yes I think it is gold-plated. For.. conduction.", "Strontium atoms held in place by lasers.", "Prototype haloscope.", "Oh no! That Twin Otter is about to crash into our antenna at the McGill Arctic Research Station!", "Plots make things more legitimate."];
       
       function displayOnly(boxnum) {
 
@@ -77,6 +94,7 @@
 		  document.getElementById(boxes[i]).style.display = "block";
 		  document.getElementById("researchImg").src = imageNames[i];
 		  document.getElementById("researchImg").title = titleTexts[i];
+		  document.getElementById("researchImg").style = "width: "+imageWidths[i]+"; height: "+imageHeights[i];
 	      } else {
 		  document.getElementById(boxes[i]).style.display = "none";
 	      }
