@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   
   <head>
@@ -13,19 +14,61 @@
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <META HTTP-EQUIV='Content-Security-Policy' CONTENT="
+							default-src 
+							  'self';
+							connect-src
+							  'self'
+							  https://api.scryfall.com
+							  embed.scryfall.com;
+							img-src
+							  'self'
+							  https://c1.scryfall.com
+							  https://c2.scryfall.com
+							  https://c3.scryfall.com;
+							style-src
+							  'self';
+							script-src
+							  'self'
+							  'unsafe-inline'
+							">
+
   </head>
 
   <body>
 
-    <h3>Hello</h3>
+    <div class="title">Guess Magic art eras</div>
+    <p>
+      I'm trying to figure out what I find off about recent Magic art direction. I think this little game will help me find patterns. How well do you know the eras of Magic art?
+    </p>
 
+    <p id="test">lose</p>
+
+    
     <img id="mtgart" align="center" src="https://c1.scryfall.com/file/scryfall-cards/art_crop/front/5/9/59cc9bdb-7cf2-4795-bac7-ffff605c9eb0.jpg?1562913725">
 
+    <br>
+
+    <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
     <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
     <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
     <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
 
+    <button>click</button>
+
     <script>
+
+      $('button').click(function(){
+           $('#test').text('test')
+      })
+
+      $.ajax({
+         url: "https://api.scryfall.com/cards/random",
+         type: "GET",
+         success: function(result) {$("#test").text(result)}
+      });
       
     </script>
 
