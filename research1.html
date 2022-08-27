@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>Taj Dyson</title>
 
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="pics/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#603cba">
@@ -52,7 +52,7 @@
       </p>
     </div>
     <div class="listlink">
-            <button class="listlinkbutt" onclick="displayOnly(3)">(2018-2021) On the Hunt for the Frist Stars</button>
+            <button class="listlinkbutt" onclick="displayOnly(3)">(2018-2021) On the Hunt for the First Stars</button>
     </div>
     <div id="3" style="display: none">
       <!--
@@ -92,7 +92,7 @@
 	  for (let i = 0; i < boxes.length; i++) {
 	      if (i === boxnum) {
 		  document.getElementById(boxes[i]).style.display = "block";
-		  document.getElementById("researchImg").src = imageNames[i];
+		  document.getElementById("researchImg").src = "pics/"+imageNames[i];
 		  document.getElementById("researchImg").title = titleTexts[i];
 		  document.getElementById("researchImg").style = "width: "+imageWidths[i]+"; height: "+imageHeights[i];
 	      } else {

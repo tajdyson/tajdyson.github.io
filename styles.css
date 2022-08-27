@@ -2,8 +2,8 @@ body {
     background-color: black;
 }
 
-@font-face { font-family: KlinicReg; src: url('KlinicSlabBook.otf'); }
-@font-face { font-family: KlinicBold; src: url('KlinicSlabBold.otf') }
+@font-face { font-family: KlinicReg; src: url('fonts/KlinicSlabBook.otf'); }
+@font-face { font-family: KlinicBold; src: url('fonts/KlinicSlabBold.otf') }
 
 p {
     color:  white;
@@ -13,6 +13,12 @@ p {
 
 a {
     color: white;
+}
+
+li {
+    color: white;
+    font-size: 125%;                                                                         
+    font-family: KlinicReg
 }
 
 .title {
