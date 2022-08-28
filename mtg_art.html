@@ -29,7 +29,8 @@
 							  https://c2.scryfall.com
 							  https://c3.scryfall.com;
 							style-src
-							  'self';
+							  'self'
+							  'unsafe-inline';
 							script-src
 							  'self'
 							  'unsafe-inline'
@@ -37,38 +38,79 @@
 
   </head>
 
-  <body>
+  <body onLoad="getCard()">
 
     <div class="title">Guess Magic art eras</div>
     <p>
-      I'm trying to figure out what I find off about recent Magic art direction. I think this little game will help me find patterns. How well do you know the eras of Magic art?
+      I'm trying to figure out what I find off about recent <i>Magic: The Gathering&#8482;</i> art direction. I think this little legally-not-a-game will help me find patterns. How well do you know the eras of Magic art?
     </p>
 
-    <p id="test">lose</p>
-
+    <p>
+      Click the button below which corresponds to the decade you think this art is from. Give the images a few seconds to load. If one doesn't load, hit the "Help ..." button to get a new one without spending a guess; the only referee here is you. Seriously this is a static website I couldn't track you if I wanted to (and I don't).
+    </p>
     
-    <img id="mtgart" align="center" src="https://c1.scryfall.com/file/scryfall-cards/art_crop/front/5/9/59cc9bdb-7cf2-4795-bac7-ffff605c9eb0.jpg?1562913725">
-
+    <h3 class="title" id="feedback" style="color: red!important; display: inline!important"></h3>
+    <h3 class="title" id="result" style="display: inline">Record: 0/0</h3>
     <br>
 
-    <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
-    <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
-    <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
-    <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
+    <img id="mtgart" align="center" src="">
 
-    <button>click</button>
+    <p id="credit"></p>
+
+    <button onclick="makeGuess(1993, 1999)">Early (1993-1999)</button>
+    <button onclick="makeGuess(2000, 2009)">Mid (2000-2009)</button>
+    <button onclick="makeGuess(2010, 2019)">Recent (2010-2019)</button>
+    <button onclick="makeGuess(2020, 2022)">Now (2020-2022)</button>
+    <br><br>
+    <button onclick="getCard()">Help it won't give me a new one</button>
 
     <script>
 
-      $('button').click(function(){
-           $('#test').text('test')
-      })
+      // I want these global
+      correct_year = 0
+      score = 0
+      guesses = 0
+      
+      function getCard() {
+	  $.ajax({
+              url: "https://api.scryfall.com/cards/random",
+              type: "GET",
+              success: function(card) {getFirstPrinting(card.name);
+				      }
+	  });
+      };
 
-      $.ajax({
-         url: "https://api.scryfall.com/cards/random",
-         type: "GET",
-         success: function(result) {$("#test").text(result)}
-      });
+      function getFirstPrinting(name) {
+	  $.ajax({
+	      url: "https://api.scryfall.com/cards/search?q="+encodeURIComponent('!"'+name+'"')+"+not%3Areprint",
+	      type: "GET",
+	      success: function(list) {displayCard(list.data[0]);
+				      },
+	      fail: function() {getCard();}
+	  });
+      };
+
+      function displayCard(card) {
+	  $("#mtgart").attr('src', card.image_uris.art_crop);
+	  $("#credit").text("Artist: "+card.artist);
+	  correct_year = parseInt(card.released_at.slice(0,-6));
+      };
+
+      function makeGuess(lower, upper) {
+	  if (correct_year >= lower && correct_year <= upper) {
+	      score += 1;
+	      $("#feedback").css({"color": "green"});
+	      $("#feedback").text("Correct! ("+correct_year+")");
+	  } else {
+	      $("#feedback").css({"color": "red"});
+	      $("#feedback").text("Incorrect ("+correct_year+")");
+	  }
+	  guesses += 1;
+
+	  $("#result").text(" Record: "+score+"/"+guesses)
+
+	  getCard();
+      };
       
     </script>
 
