@@ -91,9 +91,10 @@
       };
 
       function displayCard(card) {
-	  $("#mtgart").attr('src', card.image_uris.art_crop);
-	  $("#credit").text("Artist: "+card.artist);
-	  correct_year = parseInt(card.released_at.slice(0,-6));
+          $("#mtgart").attr('src', card.image_uris.art_crop);
+          $("#mtgart").attr('title', card.name)
+          $("#credit").text("Artist: " + card.artist);
+	      correct_year = parseInt(card.released_at.slice(0,-6));
       };
 
       function makeGuess(lower, upper) {
