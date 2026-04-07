@@ -21,34 +21,48 @@
     <p>
       I can guarantee this is fewer than 10 years out of date.
     </p>
-      <img id="researchImg" align="right">
+    <img id="researchImg" align="right">
+    
     <div class="listlink">
-      <button class="listlinkbutt" onclick="displayOnly(0)">(2022) Detecting with Qubits</button>
+            <button class="listlinkbutt" onclick="displayOnly(0)">(2021-Now) Axion Dark Matter Experiment</button>
     </div>
-    <div id="0" style="display: block">
+    <div id="0" style="display: none">
       <p>
-      It's somehow still an open question whether incoming radiation (photons, charged particles) affect qubit decoherence time. 
-      Knowing that shooting things at a qubit make it change states would be important for quantum computing by calling for a focus on radiation shielding. Not only that, but we would then be able to tell whether the qubit had something shot at it, which has applications in many subfields, from cosmic microwave background (CMB) recievers to dark matter detectors.
-      I'm working with Dr. Noah Kurinsky at the Stanford Linear Accelerator Center (SLAC) and a team at Northwestern and Fermilab, using a qubit in a dilution refrigerator at the Northwestern EXperimental Underground Site (NEXUS) to answer this question.
+	The majority of the universe is made of <i>dark matter</i>, a substance with such impact that we see traces of it across the cosmos: from the oldest, most distant light it's possible to observe (the cosmic microwave background) to the speeds of stars in our own galaxy. Its properties match none of the known fundamental particles, but they could match those of the <a href="https://en.wikipedia.org/wiki/Axion">axion</a>, which was originally theorized in 1978 for a totally unrelated reason. To test whether they're a component of dark matter, the axion dark matter experiment (ADMX) uses a powerful superconducting magnet to convert the axions passing through it into photons (light). From there, the light signal must be made as strong as possible (using resonating cavities and amplifiers) and the background noise must be suppressed (by cooling to below 1 Kelvin, using superconducting cabling, and ultra low-noise amplification). ADMX's tunable resonator currently enhances signals around 1 GHz (corresponding to axions of mass 30 &mu;eV), and has excluded the possibility that the axion has that mass. The search, then, continues upwards in frequency (and downwards, but that is the domain of Dark Matter Radio).
+      </p>
+      <p>
+	My work at Stanford is prototyping for the next phase of ADMX with Professor Chao-Lin Kuo. We design and build high-volume (around 10 L) microwave resonators at high frequency (above 5 GHz). Achieving a properly identified resonance requires careful metrology, precise alignment using a hexapod positioner, and realistic electromagnetic simulations for comparison. I developed an automated alignment algorithm for these resonators, enabling remote operation and reducing workload. I conducted a search for dark photons using one of our resonators. I helped design a cryogenic test setup for a larger resonator to demonstrate high quality factor and cryogenic alignment capability, and am currently commissioning it.
+      </p>
+      <p>
+	For more information, please read my <a href="https://kipac.stanford.edu/news/resonating-dark-matter-admx-vera">KIPAC blog post</a> and <a href="publications.html">some of my papers about it</a>. Also, contact me with the info on the homepage.
+      </p>
+      
+    </div>
+
+    <div class="listlink">
+      <button class="listlinkbutt" onclick="displayOnly(1)">(2025-Now) Superconducting Quasiparticle-Amplifying Transmons</button>
+    </div>
+    <div id="1" style="display: block">
+      <p>
+	The superconducting quasiparticle-amplifying transmon (SQUAT, pictured) is a detector for rare, low-energy events such as collisions with dark matter or incident THz-range photons. They have potenitally extremely low energy threshold and background rates, and are readily multiplexed (allowing for large arrays of many pixels), though they have yet to be fully demonstrated. The device consists of two capacitor fins (blue and purple, also act as a THz antenna) linked by a Josephson junction (inset), forming a qubit that's directly coupled to the radio frequency (rf) feedline (yellow). The qubit is weakly charge-sensitive, meaning a differential charge on the capacitor creates a splitting in the energy of the ground state of the qubit into two states: the even and odd parity states. The parity state of the qubit is continuously monitored by reading the phase of an rf signal passed through the feedline. When a particle hits the detector, it breaks Cooper pairs in the superconducting fins, generating quasiparticles there. The quasiparticles diffuse to the junction, and some tunnel across (potentially many dozens of times -- amplifying its impact). Each tunneling event causes a flip in the parity state of the qubit, which we can detect. Rare events are thus seen as a spike in the parity switching rate.
       </p>
     </div>
+    <!--
     <div class="listlink">
-          <button class="listlinkbutt" onclick="displayOnly(1)">(2022) Working on Lasers for MAGIS</button>
+      <button class="listlinkbutt" onclick="displayOnly(2)">(2023-Now) Traveling Wave Parametric Amplifiers</button>
     </div>
-    <div id="1" style="display: none">
+    <div id="2" style="display: block">
       <p>
-	Much like LIGO uses the interference between photons to detect gravitational waves, the MAGIS experiment aims to use atomic states of strontium to the same end. Lasers are used extensively to cool, excite, and even move around these atoms. During my rotation with Professor Jason Hogan, I worked on the design and testing of part of the optical system for the delivery of these lasers. I also assembled and aligned a 922 nm (infrared) laser.
+	
       </p>
     </div>
+    -->
     <div class="listlink">
-            <button class="listlinkbutt" onclick="displayOnly(2)">(2021) Axion Haloscope</button>
+          <button class="listlinkbutt" onclick="displayOnly(2)">(2022) Working on Lasers for MAGIS</button>
     </div>
     <div id="2" style="display: none">
       <p>
-	The axion is the most promising candidate for dark matter to date. Axions are directly detected in labs using resonating chambers called haloscopes. In the presence of a strong magnetic field, axions convert into photons of frequency equivalent to their mass. The resonant frequency of the haloscope thus decides what mass of axion it's sensitive to. By tuning the haloscope, we can become sensitive to different masses, either eliminate the possibility that axions have that mass, or if we're lucky, make a detection.
-      </p>
-      <p>
-	I worked on a novel haloscope designed by Professor Chao-Lin Kuo, which is physically large, allowing for fast scan rates, but resonating at a high frequency. We are thus able to explore a hitherto uncharted region of axion parameter space... eventually. So far, I've demonstrated that the prototype haloscope (pictured) is tunable and has the frequency we expect. We still need to scale up to a larger version, test it at cryogenic temperatures, implement a superconducting amplifier for our signals, and borrow a huge magnet from ADMX. I'll try to keep this updated.
+	Much like LIGO uses the interference between photons to detect gravitational waves, the MAGIS experiment aims to use atomic states of strontium to the same end. Lasers are used extensively to cool, excite, and even move these atoms by tens of meters. During my rotation with Professor Jason Hogan, I worked on the design and testing of part of the optical system for the delivery of these lasers. I also assembled and aligned a 922 nm (infrared) laser.
       </p>
     </div>
     <div class="listlink">
@@ -82,10 +96,10 @@
 
     <script>
       const boxes = ["0", "1", "2", "3", "4"];
-      const imageNames = ["Blue Fors.jpg", "hogan.jpg","axion prototype.png","mars_antenna.jpg","CA entropy.png"];
-      const imageWidths = ["300px", "416px", "294px", "400px", "394px"];
-      const imageHeights = ["400px", "312px", "451px", "225px", "222px"];
-      const titleTexts = ["A Blue Fors cryostat. Yes I think it is gold-plated. For.. conduction.", "Strontium atoms held in place by lasers.", "Prototype haloscope.", "Oh no! That Twin Otter is about to crash into our antenna at the McGill Arctic Research Station!", "Plots make things more legitimate."];
+      const imageNames = ["axion prototype.png", "squat_small.png", "hogan.jpg","mars_antenna.jpg","CA entropy.png"];
+      const imageWidths = ["392px", "500px", "520px", "400px", "394px"];
+      const imageHeights = ["602px", "332px", "390px", "225px", "222px"];
+      const titleTexts = ["Prototype haloscope.", "Microscope image of a SQUAT (inset is SEM) (False colors).", "Strontium atoms held in place by lasers.", "Oh no! That Twin Otter is about to crash into our antenna at the McGill Arctic Research Station!", "Plots make things more legitimate."];
       
       function displayOnly(boxnum) {
 

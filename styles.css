@@ -27,6 +27,12 @@ li {
     font-family: KlinicBold;
 }
 
+.subtitle {                                                                                                                                                                                                        
+    color: white;                                                                                                                                                                                               
+    font-size: 150%;                                                                                                                                                                                            
+    font-family: KlinicBold;                                                                                                                                                                                    
+}
+
 .listlink {
     color: white;
     font-size: 150%;
