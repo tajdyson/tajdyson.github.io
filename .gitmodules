@@ -1,0 +1,3 @@
+[submodule "reverse-gesture-keyboard"]
+	path = reverse-gesture-keyboard
+	url = git@github.com:1sadtrombone/reverse-gesture-keyboard.git
